@@ -1,6 +1,6 @@
 ---
 name: marketplace-listing
-version: 2.0.0
+version: 2.1.0
 description: >
   Use when the user wants to sell something, or to write or rewrite a Facebook
   Marketplace, OLX, Mercado Libre, or classified listing in Honduras. Triggers
@@ -23,18 +23,32 @@ allowed-tools:
 
 # Marketplace Listing (Honduras): Photos → Listing + Local Price
 
-Turn the user's **photos** plus a few facts into **THE listing** — the clean,
-cordial, easy-to-find post a real small shop would write. Not a pirate repost,
-not an ad, not AI.
+Turn the user's **photos** plus a few facts into **THE listing** — the post that
+makes the item look genuinely good and is easy to find. Not a flat generic post,
+not hype, not AI.
 
 Two stages, usually run together: **(1) listing copy** from the photos, and
 **(2) local price research**. Either can run alone if that's all the user wants.
 
-The make-or-break parts are the **Voice** (cordial, "usted", shop register) and
-the **search** (title + tags that match what people actually type). Don't skim
-those.
+The make-or-break parts are the **Voice** (make the item stand out without going
+ridiculous) and the **search** (title + tags that match what people type). Don't
+skim those.
 
 ## Stage 1 — Listing from photos
+
+### Shop profile — fixed data, given once (read this FIRST)
+The user's fixed business data lives in **`datos-tienda.md`** in this skill's
+folder: shipping policy and coverage, pickup location, payment methods, contact,
+and a standard closing. The user gave this once. **Read it before writing any
+listing and reuse it verbatim — never lose it, never change it, never re-ask
+what's already on file.**
+
+- **Shipping/delivery and contact are REQUIRED in every listing.** They come from
+  the profile. Never drop them.
+- If `datos-tienda.md` is missing, or a field you need is blank, ask the user
+  **once**, then save it there so next time it's automatic.
+- Item-specific facts (size, price, condition) are NOT shop data — those you
+  gather per item, below.
 
 ### Start from the photos
 The user sends photos. Look at them first and read off what's visible:
@@ -42,23 +56,22 @@ The user sends photos. Look at them first and read off what's visible:
 - Item type, color(s), material/texture, style, any visible brand or logo
 - Condition cues (new, tags on, wear, damage) and what's included
 
-Use that to fill in details **without interrogating** the user. Then ask only
-for what a photo can't show, in **one short batch** (AskUserQuestion), not one
-question at a time:
+Use that to fill details **without interrogating** the user. Then ask only for
+what the profile and photo can't give, in **one short batch** (AskUserQuestion):
 
 - Sizes / measurements available (`tallas`) — for clothing and shoes
 - Price (if they want one shown), exact brand/model if not visible
-- Location, and pickup vs. delivery
+- Anything item-specific you can't see
 
-**Never invent** flaws, specs, measurements, or history that aren't in the photo
-or stated by the user. A made-up detail that's wrong at pickup kills the sale.
-When something is uncertain, confirm it — don't guess.
+**Never invent** flaws, specs, measurements, or history not in the photo or
+stated by the user. A made-up detail that's wrong at pickup kills the sale. When
+unsure, confirm — don't guess.
 
 ### Output format
 
 - **Title** — search-first (see below).
-- **Description** — simple, short, scannable (see below).
-- **Selling points** — 0–4 short bullets, only if they add something new. Cut, don't pad.
+- **Description** — makes the item stand out, grounded (see Voice).
+- **Shipping + contact** — from the shop profile; always present, never dropped.
 - **Search tags** — one line of real, researched terms (see below).
 - **Price** — slotted in if the user wants one (Stage 2).
 
@@ -73,17 +86,6 @@ people search: category + the key attribute they'd type.
 - No catalog/variant framing (`Producto – nuevo color azul`). No ALL CAPS, no
   `🔥 OFERTA`. That reads as pirate.
 
-### Description — simple, made for Facebook
-People don't read paragraphs, least of all on Facebook. Keep it scannable.
-
-- **Short sentences. One idea per line. Few commas** — avoid long comma-chained
-  sentences.
-- Order: one friendly first line, then the facts (condition, material, sizes
-  available, what's included, any real flaw), then how to buy.
-- Short bullets are fine. Never a wall of text.
-- Close with a cordial, neutral invitation: `Escríbanos si necesita otra talla o
-  color.` · `Con gusto le atendemos.`
-
 ### Search tags — real, not generic
 **Don't** invent generic or numbered tags ("sombrilla 1, sombrilla 2"). Use
 WebSearch to see how people actually search for this in Honduras (autocomplete,
@@ -97,24 +99,42 @@ synonyms.
   body. Marketplace has no real tag field, but the text is indexed, so the right
   terms help you show up.
 
-## Voice — cordial, "usted", small-shop register (matters most)
-Sound like **a cordial small shop**, not an informal street vendor and not an ad.
+## Voice — make it stand out, grounded (matters most)
+There are **two ways to fail**, and the listing must avoid both:
 
-- Address the buyer as **usted**, plural and warm when closing: `escríbanos`,
-  `tenemos`, `le ofrecemos`, `con gusto le atendemos`.
-- **No voseo, no Honduran slang.** Avoid `ocupás`/`ocupa` (use `necesita`),
-  `escribime` (use `escríbanos`), `mirá`, `va pues`, `te lo dejo en…`,
-  `compráme`. Keep it neutral and cordial.
-- **Cordial is not hype.** Still no `increíble`, `el mejor precio`, `no te lo
-  pierdas`, no ALL CAPS, no emoji pileups (one at most, usually zero).
-- **Honest and plain.** State the facts. Name real flaws — it builds trust and
-  filters out time-wasters.
-- The goal: it reads like **THE listing** from a serious shop, not a pirate
-  repost or AI.
+- **Boring** — a flat, generic post (`Vestido azul. Talla M. Nuevo.`) that makes
+  a nice item look like nothing special. This loses sales.
+- **Ridiculous** — hype, emoji storms, fake urgency, stacked superlatives. This
+  reads as a scam.
 
-Final check: reread and ask, *"Would a cordial, serious shop write this — or does
-it smell like an ad, a pirate post, or AI?"* If it smells, simplify. For a deeper
-polish, the `humanizer` skill is worth a pass.
+Aim for the **middle**: sound like a good shop clerk who knows the product well —
+confident, warm, and specific. Make it look genuinely appealing, **without
+shouting.**
+
+**Make it stand out (do this):**
+- Open with a real hook: the one thing that makes this item nice or useful, in a
+  natural line.
+- Use concrete, appealing detail grounded in the photo and facts: how the fabric
+  falls, the fit, comfort, quality cues, what it pairs with, what occasion it
+  suits. **Specifics sell; empty adjectives don't.**
+- Be confident and cordial: the item is good and you're glad to offer it.
+
+**Don't go ridiculous (avoid this):**
+- No stacked superlatives (`el más hermoso, calidad premium, increíble`).
+- No emoji storms, ALL CAPS, or fake urgency (`¡últimas piezas!`, `no te lo pierdas`).
+- No lies or invented hype. If you have to inflate it, you've already lost trust.
+
+**Register — cordial "usted", shop voice:** `escríbanos`, `tenemos`,
+`le ofrecemos`, `con gusto le atendemos`. **No voseo, no Honduran slang** —
+avoid `ocupás` (use `necesita`), `escribime` (use `escríbanos`), `mirá`,
+`va pues`, `compráme`. Cordial, not a banasupro vendor; cordial is not hype.
+
+Keep it **short and scannable for Facebook**: short sentences, one idea per line,
+few commas. Appealing does not mean long.
+
+The test: *"Would a tasteful boutique write this — appealing but grounded?"* If it
+reads flat, add one real, concrete detail. If it reads like an ad, cut the hype.
+For a deeper polish, the `humanizer` skill is worth a pass.
 
 ## Stage 2 — Pricing (Honduras only, realistic)
 Goal: a **realistic local price**, not an inflated one.
@@ -147,24 +167,30 @@ English or asks for both, give Spanish first, then English, clearly separated.
   that clear, well-lit photos sell faster — but never offer to create images.
 
 ## Example (shape, not a script)
-Input: the user sends a photo of a blue dress + *"tengo en M y L, está nuevo"*.
+Input: a photo of a blue dress + *"tengo en M y L, está nuevo."* The shop profile
+(`datos-tienda.md`) says: envíos a todo Honduras, contra entrega; pago en efectivo
+o transferencia; WhatsApp 9999-9999.
 
-A good listing:
+**Flat / generic — don't:**
+
+> Vestido azul. Talla M y L. Nuevo. Escríbanos.
+
+**Ridiculous / hype — don't:**
+
+> 🔥😍 VESTIDO HERMOSO!!! el más lindo y de calidad premium, te vas a enamorar
+> reina 👑 ¡no te lo pierdas que se acaban! 🏃‍♀️💨
+
+**Just right — stands out, grounded — do:**
 
 > **Vestido azul casual talla M y L**
 >
-> Vestido azul, nuevo. Tela fresca y cómoda.
-> Disponible en talla M y L.
-> Entrega en [su zona] o envío por encomienda.
-> Escríbanos si necesita otra talla o color. Con gusto le atendemos.
+> Vestido azul de corte casual, fresco y cómodo para el diario o para salir.
+> La tela cae bonito y no se transparenta. Nuevo, en talla M y L.
+> Hacemos envíos a todo Honduras, pago contra entrega. Aceptamos efectivo o transferencia.
+> Escríbanos al 9999-9999 si necesita otra talla o color. Con gusto le atendemos.
 >
 > Para búsqueda: vestido azul, vestido casual, vestido de dama, ropa de mujer, vestido talla M, vestido elegante.
-> Precio sugerido: L 450 (rango L 400–500).
 
-Not like:
-
-> 🔥🔥 VESTIDO NUEVO color AZUL 🔵 oferta!!! el mejor precio, escribime ya que se acaban 🏃‍♀️💨
-
-The bad one shouts, uses slang (`escribime`), repeats what the photo already
-shows (`color azul`), and reads as pirate. The good one is easy to find, reads in
-one glance, and builds trust.
+The flat one makes a nice dress look like nothing. The hype one reads as a scam.
+The third makes it appealing with one real detail, keeps the shipping and contact
+from the profile, and stays cordial.
