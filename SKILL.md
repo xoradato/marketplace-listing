@@ -1,6 +1,6 @@
 ---
 name: marketplace-listing
-version: 2.1.0
+version: 2.2.0
 description: >
   Use when the user wants to sell something, or to write or rewrite a Facebook
   Marketplace, OLX, Mercado Libre, or classified listing in Honduras. Triggers
@@ -28,7 +28,9 @@ makes the item look genuinely good and is easy to find. Not a flat generic post,
 not hype, not AI.
 
 Two stages, usually run together: **(1) listing copy** from the photos, and
-**(2) local price research**. Either can run alone if that's all the user wants.
+**(2) the price** — researched only for new electronics, otherwise the user's
+own price slotted in (see Stage 2). Either stage can run alone if that's all
+the user wants.
 
 The make-or-break parts are the **Voice** (make the item stand out without going
 ridiculous) and the **search** (title + tags that match what people type). Don't
@@ -72,7 +74,8 @@ unsure, confirm — don't guess.
 - **Title** — search-first (see below).
 - **Description** — makes the item stand out, grounded (see Voice).
 - **Shipping + contact** — from the shop profile; always present, never dropped.
-- **Search tags** — one line of real, researched terms (see below).
+- **Search tags** — every listing ends with one comma-separated line, ready to
+  copy and paste as-is (see below).
 - **Price** — slotted in if the user wants one (Stage 2).
 
 ### Title — search-first, no wasted words
@@ -95,8 +98,10 @@ synonyms.
 
 - Example for a blue dress: `vestido azul, vestido casual, vestido de dama, ropa
   de mujer, vestido talla M, vestido elegante`
-- Put them on their own line (`Para búsqueda: …`). Don't stuff them into the
-  body. Marketplace has no real tag field, but the text is indexed, so the right
+- **Every listing ends with the `Para búsqueda: …` line**: comma-separated, on
+  its own line, ready to **copy and paste as-is** — no formatting or brackets
+  the user would have to clean up. Don't stuff the terms into the body.
+  Marketplace has no real tag field, but the text is indexed, so the right
   terms help you show up.
 
 ## Voice — make it stand out, grounded (matters most)
@@ -108,8 +113,9 @@ There are **two ways to fail**, and the listing must avoid both:
   reads as a scam.
 
 Aim for the **middle**: sound like a good shop clerk who knows the product well —
-confident, warm, and specific. Make it look genuinely appealing, **without
-shouting.**
+confident, warm, and specific. The tone is **cordial but neutral and impartial**:
+describe the item as it is and let the real details sell it. Make it look
+genuinely appealing, **without shouting.**
 
 **Make it stand out (do this):**
 - Open with a real hook: the one thing that makes this item nice or useful, in a
@@ -123,11 +129,15 @@ shouting.**
 - No stacked superlatives (`el más hermoso, calidad premium, increíble`).
 - No emoji storms, ALL CAPS, or fake urgency (`¡últimas piezas!`, `no te lo pierdas`).
 - No lies or invented hype. If you have to inflate it, you've already lost trust.
+- **No exaggeration or overfabricated copy.** Don't dress the item up beyond what
+  the photos and stated facts support.
 
-**Register — cordial "usted", shop voice:** `escríbanos`, `tenemos`,
-`le ofrecemos`, `con gusto le atendemos`. **No voseo, no Honduran slang** —
-avoid `ocupás` (use `necesita`), `escribime` (use `escríbanos`), `mirá`,
-`va pues`, `compráme`. Cordial, not a banasupro vendor; cordial is not hype.
+**Register — cordial "usted", shop voice, plain Spanish:** `escríbanos`,
+`tenemos`, `le ofrecemos`, `con gusto le atendemos`. Write so the average
+Honduran reads it without effort — simple everyday words, **no colloquialisms**.
+**No voseo, no Honduran slang** — avoid `ocupás` (use `necesita`), `escribime`
+(use `escríbanos`), `mirá`, `va pues`, `compráme`. Cordial, not a banasupro
+vendor; cordial is not hype.
 
 Keep it **short and scannable for Facebook**: short sentences, one idea per line,
 few commas. Appealing does not mean long.
@@ -137,11 +147,15 @@ reads flat, add one real, concrete detail. If it reads like an ad, cut the hype.
 For a deeper polish, the `humanizer` skill is worth a pass.
 
 ## Stage 2 — Pricing (Honduras only, realistic)
-Goal: a **realistic local price**, not an inflated one.
+Goal: a **reasonable, non-abusive local price**, not an inflated one.
+
+**Scope: price research is for electronics only, and only when the user hands
+over a NEW product.** Everything else — used electronics, clothing, shoes,
+general items — gets no research: just slot in the user's price.
 
 - Research **only local markets**: Facebook Marketplace Honduras, Encuentra24,
-  Mercado Libre Honduras, local buy/sell groups, and local stores for new
-  clothing. Search in Spanish: item + `Honduras`, `precio`, `usado`/`nuevo`.
+  Mercado Libre Honduras, local buy/sell groups, and local electronics stores.
+  Search in Spanish: item + `Honduras`, `precio`, `nuevo`.
 - **Do NOT anchor on eBay or US prices.** That is what inflates prices and makes
   them absurd for here.
 - Pull 4–8 real local comps, each with its condition and source.
