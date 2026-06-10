@@ -1,6 +1,6 @@
 ---
 name: marketplace-listing
-version: 2.2.0
+version: 2.3.0
 description: >
   Use when the user wants to sell something, or to write or rewrite a Facebook
   Marketplace, OLX, Mercado Libre, or classified listing in Honduras. Triggers
@@ -32,9 +32,44 @@ Two stages, usually run together: **(1) listing copy** from the photos, and
 own price slotted in (see Stage 2). Either stage can run alone if that's all
 the user wants.
 
-The make-or-break parts are the **Voice** (make the item stand out without going
+The make-or-break parts are the **Delivery** (give the finished post, not a
+conversation about it), the **Voice** (make the item stand out without going
 ridiculous) and the **search** (title + tags that match what people type). Don't
 skim those.
+
+## Delivery — the listing is the answer, not the conversation
+
+This skill's recurring failure is not the copy — it's everything around it:
+narrated process, strategy nobody asked for, and "next steps" instead of a
+finished post. The user's verdict on that mode: *"tries to do everything but
+accomplishes nothing."*
+
+**The deliverable is one copy-paste-ready listing block per item.** Work back
+from that.
+
+- **One item at a time, finished.** Several items → complete the first fully,
+  then the next. Never respond with an overview of all of them.
+- **No process narration.** Don't open with "Voy a evaluar…" / "Primero
+  investigo…". Do the work, show the result.
+- **No meta-commentary.** Never explain what was weak in your draft, what you
+  changed, or which skills you loaded. If you polish with `humanizer`, do it
+  silently.
+- **No executive summaries, plans, or strategy** unless the user explicitly
+  asks for them. A listing request is not an invitation to redesign the sales
+  routine.
+- **Don't end with a menu.** No "el siguiente paso natural sería…", no offers
+  of extra work. End at the tag line and stop. If something genuinely blocks
+  the next item, ask that one thing.
+- **Ask once, then produce.** One short batch (AskUserQuestion) for facts the
+  photos and profile can't give. Don't block on nice-to-haves.
+- Chat in the user's language and keep it brief; the listing itself in Spanish.
+
+| The thought | Do instead |
+|---|---|
+| "Let me summarize the plan first" | There is no plan. Write the listing. |
+| "I'll explain what I improved" | Show the listing; explain only if asked. |
+| "This ties into their bigger strategy" | Not asked. This item only. |
+| "I'll offer next steps to be helpful" | The finished post IS the help. Stop. |
 
 ## Stage 1 — Listing from photos
 
@@ -74,8 +109,8 @@ unsure, confirm — don't guess.
 - **Title** — search-first (see below).
 - **Description** — makes the item stand out, grounded (see Voice).
 - **Shipping + contact** — from the shop profile; always present, never dropped.
-- **Search tags** — every listing ends with one comma-separated line, ready to
-  copy and paste as-is (see below).
+- **Search tags** — every listing ends with one comma-separated line of **20
+  varied terms**, ready to copy and paste as-is (see below).
 - **Price** — slotted in if the user wants one (Stage 2).
 
 ### Title — search-first, no wasted words
@@ -89,20 +124,21 @@ people search: category + the key attribute they'd type.
 - No catalog/variant framing (`Producto – nuevo color azul`). No ALL CAPS, no
   `🔥 OFERTA`. That reads as pirate.
 
-### Search tags — real, not generic
-**Don't** invent generic or numbered tags ("sombrilla 1, sombrilla 2"). Use
-WebSearch to see how people actually search for this in Honduras (autocomplete,
-common terms, synonyms, regional words). Then give one line of **real** terms:
-general category (for volume) + specific attributes (for the right buyer) +
-synonyms.
+### Search tags — 20 real terms, ready to paste
+**Every listing ends with the `Para búsqueda: …` line: 20 varied,
+comma-separated terms on their own line, ready to copy and paste as-is** — no
+brackets or formatting the user would have to clean up. The user fixed the
+number at 20: don't shrink it, and never drop the line because it "reads like
+SEO" — Marketplace has no real tag field, but the text is indexed, and this
+line is how buyers find the post. Don't stuff the terms into the body.
 
-- Example for a blue dress: `vestido azul, vestido casual, vestido de dama, ropa
-  de mujer, vestido talla M, vestido elegante`
-- **Every listing ends with the `Para búsqueda: …` line**: comma-separated, on
-  its own line, ready to **copy and paste as-is** — no formatting or brackets
-  the user would have to clean up. Don't stuff the terms into the body.
-  Marketplace has no real tag field, but the text is indexed, so the right
-  terms help you show up.
+Vary the 20 — not the product name conjugated twenty ways, and no generic or
+numbered tags ("sombrilla 1, sombrilla 2"). Use WebSearch to see how people
+actually search for this in Honduras, then mix:
+- general category (for volume) + specific attributes (for the right buyer)
+- synonyms and regional words
+- use-case and audience searches people type without naming the product
+  ("laptop para clases en línea", "regalo para mamá")
 
 ## Voice — make it stand out, grounded (matters most)
 There are **two ways to fail**, and the listing must avoid both:
@@ -203,7 +239,7 @@ o transferencia; WhatsApp 9999-9999.
 > Hacemos envíos a todo Honduras, pago contra entrega. Aceptamos efectivo o transferencia.
 > Escríbanos al 9999-9999 si necesita otra talla o color. Con gusto le atendemos.
 >
-> Para búsqueda: vestido azul, vestido casual, vestido de dama, ropa de mujer, vestido talla M, vestido elegante.
+> Para búsqueda: vestido azul, vestido casual, vestido de dama, ropa de mujer, vestido talla M, vestido talla L, vestido elegante, vestido para salir, vestido fresco, vestido nuevo, moda mujer, ropa casual de dama, vestido económico, vestido bonito, vestido para el diario, ropa nueva mujer, vestido juvenil, outfit casual, vestido cómodo, vestidos Tegucigalpa.
 
 The flat one makes a nice dress look like nothing. The hype one reads as a scam.
 The third makes it appealing with one real detail, keeps the shipping and contact
