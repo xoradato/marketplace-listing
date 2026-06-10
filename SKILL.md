@@ -1,6 +1,6 @@
 ---
 name: marketplace-listing
-version: 2.3.0
+version: 2.4.0
 description: >
   Use when the user wants to sell something, or to write or rewrite a Facebook
   Marketplace, OLX, Mercado Libre, or classified listing in Honduras. Triggers
@@ -82,6 +82,10 @@ what's already on file.**
 
 - **Shipping/delivery and contact are REQUIRED in every listing.** They come from
   the profile. Never drop them.
+- Once the user has approved the assembled shipping + closing block, that exact
+  wording is the standard: **reuse the same block verbatim in every listing —
+  never reword, trim, or restyle it.** This includes the cordial closing line and
+  any profile rule about keeping the phone number out of the public text.
 - If `datos-tienda.md` is missing, or a field you need is blank, ask the user
   **once**, then save it there so next time it's automatic.
 - Item-specific facts (size, price, condition) are NOT shop data — those you
