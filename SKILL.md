@@ -1,6 +1,6 @@
 ---
 name: marketplace-listing
-version: 2.4.0
+version: 3.0.0
 description: >
   Use when the user wants to sell something, or to write or rewrite a Facebook
   Marketplace, OLX, Mercado Libre, or classified listing in Honduras. Triggers
@@ -25,7 +25,7 @@ allowed-tools:
 
 Turn the user's **photos** plus a few facts into **THE listing** — the post that
 makes the item look genuinely good and is easy to find. Not a flat generic post,
-not hype, not AI.
+not hype, and above all not machine-flavored ad-copy.
 
 Two stages, usually run together: **(1) listing copy** from the photos, and
 **(2) the price** — researched only for new electronics, otherwise the user's
@@ -33,8 +33,8 @@ own price slotted in (see Stage 2). Either stage can run alone if that's all
 the user wants.
 
 The make-or-break parts are the **Delivery** (give the finished post, not a
-conversation about it), the **Voice** (make the item stand out without going
-ridiculous) and the **search** (title + tags that match what people type). Don't
+conversation about it), the **Voice** (sound like a person typing a post, not a
+copywriter) and the **search** (title + tags that match what people type). Don't
 skim those.
 
 ## Delivery — the listing is the answer, not the conversation
@@ -144,47 +144,61 @@ actually search for this in Honduras, then mix:
 - use-case and audience searches people type without naming the product
   ("laptop para clases en línea", "regalo para mamá")
 
-## Voice — make it stand out, grounded (matters most)
-There are **two ways to fail**, and the listing must avoid both:
+## Voice — a person typing a post, not a copywriter (matters most)
+There are **three ways to fail**, and the third is the one that actually happens:
 
-- **Boring** — a flat, generic post (`Vestido azul. Talla M. Nuevo.`) that makes
-  a nice item look like nothing special. This loses sales.
-- **Ridiculous** — hype, emoji storms, fake urgency, stacked superlatives. This
-  reads as a scam.
+- **Boring** — a flat, generic post (`Vestido azul. Talla M. Nuevo.`) with
+  nothing a buyer can want.
+- **Ridiculous** — hype, emoji storms, fake urgency, stacked superlatives. Reads
+  as a scam.
+- **Machine** — grammatically perfect ad-copy where every noun carries a
+  decorating clause and every line ends by selling a benefit. No human types a
+  Marketplace post like that, buyers feel it, and it does not sell. **This is
+  the default failure of AI-written Spanish. Treat it as the main enemy.**
 
-Aim for the **middle**: sound like a good shop clerk who knows the product well —
-confident, warm, and specific. The tone is **cordial but neutral and impartial**:
-describe the item as it is and let the real details sell it. Make it look
-genuinely appealing, **without shouting.**
+### Machine tells — banned, by name
+These all come from real failed drafts. If one appears, the line gets rewritten:
 
-**Make it stand out (do this):**
-- Open with a real hook: the one thing that makes this item nice or useful, in a
-  natural line.
-- Use concrete, appealing detail grounded in the photo and facts: how the fabric
-  falls, the fit, comfort, quality cues, what it pairs with, what occasion it
-  suits. **Specifics sell; empty adjectives don't.**
-- Be confident and cordial: the item is good and you're glad to offer it.
+| Tell | Example (don't) |
+|---|---|
+| Adjective pairs bolted to nouns | `fresca y cómoda`, `limpio y discreto`, `elegante y versátil`, `práctico y funcional` |
+| Use-case menus | `para el trabajo, clases o una salida casual`, `ideal para cualquier ocasión` |
+| Two-branch formulas | `ya sea para X o para Y`, `tanto para X como para Y`, `no solo X sino también Y` |
+| Copywriter verbs | `cuenta con`, `brinda`, `ofrece`, `destaca por`, `lo convierte en` |
+| Benefit endings everywhere | every line closing with why it's good (`…que aguanta bien el uso diario`) |
+| Invented appraisals | facts said `logo bordado al pecho`; the draft added `con un acabado limpio y discreto` — fabricated |
+| Metronomic rhythm | three lines in a row with the same shape (noun + comma + decorating clause) |
 
-**Don't go ridiculous (avoid this):**
-- No stacked superlatives (`el más hermoso, calidad premium, increíble`).
-- No emoji storms, ALL CAPS, or fake urgency (`¡últimas piezas!`, `no te lo pierdas`).
-- No lies or invented hype. If you have to inflate it, you've already lost trust.
-- **No exaggeration or overfabricated copy.** Don't dress the item up beyond what
-  the photos and stated facts support.
+**Invented appraisals are the worst tell.** If the user didn't say it and the
+photo doesn't show it, it does not exist. Quality judgments (`acabado fino`,
+`costuras reforzadas`) count as facts — they need a source too.
+
+### What a person sounds like — do
+- **Facts carry the post,** grouped the way a person would type them:
+  `Camisa tipo polo de hombre, azul marino, nueva con etiqueta.` is one natural
+  line — don't shred it into three fragments. Short lines like `Tallas M y G.`
+  are fine between fuller ones.
+- **Exactly one selling line — required, not optional.** A post that is only a
+  spec sheet is the flat failure and loses the sale. Pick the single best real
+  detail — something a buyer could verify at pickup or that the photo shows —
+  and give it a natural sentence: `la tela no se transparenta`, `el piqué es
+  del grueso bueno, no del delgadito`. One real detail sells more than five
+  decorated nouns. Can't verify it? Pick another detail, don't invent one.
+- **Uneven rhythm:** a fuller line, then a short one. Both uniform rhythms read
+  generated — all decorated clauses is machine, and six two-word fragments in a
+  row is a spec sheet.
+- **The test, line by line:** *would the seller type this on their phone?* A
+  line whose only job is to sell gets cut; a post with no life gets its one
+  selling line back.
 
 **Register — cordial "usted", shop voice, plain Spanish:** `escríbanos`,
-`tenemos`, `le ofrecemos`, `con gusto le atendemos`. Write so the average
-Honduran reads it without effort — simple everyday words, **no colloquialisms**.
-**No voseo, no Honduran slang** — avoid `ocupás` (use `necesita`), `escribime`
-(use `escríbanos`), `mirá`, `va pues`, `compráme`. Cordial, not a banasupro
-vendor; cordial is not hype.
+`tenemos`, `con gusto le atendemos`. Write so the average Honduran reads it
+without effort — simple everyday words, **no colloquialisms**. **No voseo, no
+Honduran slang** — avoid `ocupás` (use `necesita`), `escribime` (use
+`escríbanos`), `mirá`, `va pues`. Cordial, not a banasupro vendor; cordial is
+not hype.
 
-Keep it **short and scannable for Facebook**: short sentences, one idea per line,
-few commas. Appealing does not mean long.
-
-The test: *"Would a tasteful boutique write this — appealing but grounded?"* If it
-reads flat, add one real, concrete detail. If it reads like an ad, cut the hype.
-For a deeper polish, the `humanizer` skill is worth a pass.
+Keep it **short and scannable for Facebook**: one idea per line, few commas.
 
 ## Stage 2 — Pricing (Honduras only, realistic)
 Goal: a **reasonable, non-abusive local price**, not an inflated one.
@@ -234,17 +248,25 @@ o transferencia; WhatsApp 9999-9999.
 > 🔥😍 VESTIDO HERMOSO!!! el más lindo y de calidad premium, te vas a enamorar
 > reina 👑 ¡no te lo pierdas que se acaban! 🏃‍♀️💨
 
-**Just right — stands out, grounded — do:**
+**Machine / ad-copy — don't (this is the one that actually happens):**
+
+> Vestido azul de corte casual, fresco y cómodo, ideal para el diario o para
+> salir. Su tela ligera brinda comodidad y frescura, y su diseño versátil lo
+> convierte en una excelente opción para cualquier ocasión.
+
+**Just right — a person typed this — do:**
 
 > **Vestido azul casual talla M y L**
 >
-> Vestido azul de corte casual, fresco y cómodo para el diario o para salir.
-> La tela cae bonito y no se transparenta. Nuevo, en talla M y L.
+> Vestido azul de corte casual, nuevo.
+> Tallas M y L.
+> La tela cae bonito y no se transparenta.
 > Hacemos envíos a todo Honduras, pago contra entrega. Aceptamos efectivo o transferencia.
 > Escríbanos al 9999-9999 si necesita otra talla o color. Con gusto le atendemos.
 >
 > Para búsqueda: vestido azul, vestido casual, vestido de dama, ropa de mujer, vestido talla M, vestido talla L, vestido elegante, vestido para salir, vestido fresco, vestido nuevo, moda mujer, ropa casual de dama, vestido económico, vestido bonito, vestido para el diario, ropa nueva mujer, vestido juvenil, outfit casual, vestido cómodo, vestidos Tegucigalpa.
 
-The flat one makes a nice dress look like nothing. The hype one reads as a scam.
-The third makes it appealing with one real detail, keeps the shipping and contact
-from the profile, and stays cordial.
+The flat one gives nothing to want. The hype one reads as a scam. The machine
+one is grammatically perfect and sells nothing — every noun is decorated and no
+line sounds typed. The last one is mostly bare facts, one verifiable detail
+(`no se transparenta`), uneven line lengths, and the profile block intact.
