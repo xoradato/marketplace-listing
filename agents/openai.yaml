@@ -1,0 +1,7 @@
+interface:
+  display_name: "Marketplace Listing"
+  short_description: "Mejora publicaciones para Honduras y EE. UU."
+  default_prompt: "Use $marketplace-listing to review this Marketplace photo, screenshot, or existing copy and return a natural, evidence-grounded replacement for the selected market."
+
+policy:
+  allow_implicit_invocation: true

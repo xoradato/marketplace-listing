@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="620" viewBox="0 0 760 620" role="img" aria-labelledby="title desc">
+  <title id="title">Antes y Después de una publicación Marketplace</title>
+  <desc id="desc">Comparación simple de una publicación genérica de sombrilla Alentino antes y después, sin datos de vendedor.</desc>
+  <rect width="760" height="620" fill="#F6F9FF"/>
+  <text x="38" y="58" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#142C4D">Antes y después</text>
+  <text x="38" y="92" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#5C6D84">Un ejemplo genérico: mismos hechos, presentación más clara.</text>
+
+  <rect x="38" y="126" width="328" height="430" rx="22" fill="#FFFFFF" stroke="#CEDBF0" stroke-width="2"/>
+  <rect x="62" y="150" width="88" height="34" rx="17" fill="#EAF2FF" stroke="#CEDBF0"/>
+  <text x="84" y="173" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#2067D5">Antes</text>
+  <rect x="62" y="210" width="174" height="18" rx="9" fill="#142C4D" opacity="0.9"/>
+  <text x="62" y="264" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#142C4D">Sombrilla</text>
+  <text x="62" y="306" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5C6D84">Nueva varios colores</text>
+  <text x="62" y="340" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5C6D84">L.120</text>
+  <text x="62" y="388" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#5C6D84">Falta marca, tamaño</text>
+  <text x="62" y="414" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#5C6D84">y una invitación natural.</text>
+
+  <rect x="394" y="126" width="328" height="430" rx="22" fill="#FFFFFF" stroke="#CEDBF0" stroke-width="2"/>
+  <rect x="418" y="150" width="112" height="34" rx="17" fill="#EAF2FF" stroke="#CEDBF0"/>
+  <text x="442" y="173" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#2067D5">Después</text>
+  <text x="418" y="224" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#142C4D">Sombrilla plegable</text>
+  <text x="418" y="254" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#142C4D">Alentino nueva</text>
+  <text x="418" y="300" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5C6D84">Modelo compacto, se dobla</text>
+  <text x="418" y="326" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5C6D84">hasta quedar del tamaño</text>
+  <text x="418" y="352" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5C6D84">de la mano.</text>
+  <text x="418" y="398" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#142C4D">Precio: L.120.</text>
+  <text x="418" y="446" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5C6D84">Escríbanos para confirmar</text>
+  <text x="418" y="472" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5C6D84">qué colores están disponibles.</text>
+
+  <rect x="38" y="574" width="174" height="30" rx="15" fill="#EAF2FF" stroke="#CEDBF0"/>
+  <text x="58" y="595" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#142C4D">Honduras · ES</text>
+  <rect x="226" y="574" width="238" height="30" rx="15" fill="#EAF2FF" stroke="#CEDBF0"/>
+  <text x="246" y="595" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#142C4D">United States · EN / ES</text>
+</svg>

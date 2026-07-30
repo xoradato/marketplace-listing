@@ -1,0 +1,4 @@
+# Private shop data — given once, kept local, never pushed
+datos-tienda.md
+*.local.md
+.worktrees/
